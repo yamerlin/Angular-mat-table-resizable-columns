@@ -1,0 +1,61 @@
+.mat-mdc-table {
+    min-width: 0%;
+}
+
+table {
+    overflow-x: auto;
+    table-layout: auto;
+    /* width: 80%;
+    margin: 40px auto; */
+}
+
+table th {
+    position: relative;
+}
+
+.resizer-left {
+    display: inline-block;
+    border-right: 10px solid lightgray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: ew-resize;
+
+    /* opacity: 0; */
+}
+
+.resizer-right {
+    display: inline-block;
+    border-right: 10px solid lightgray;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    cursor: ew-resize;
+
+    /* opacity: 0; */
+}
+
+.mat-mdc-header-cell{
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.mat-mdc-cell{
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.content-div{
+    /* Pour ne montrer que 2 lignes, on creé une div dans chaque case du tableau, 
+    et on limite la hauteur de la div a deux fois la hauteur d'une ligne, 
+    comme ca seule deux lignes sont visible */
+    /* Bon j'ai du enlever 5 pixel à max-height pcque sinon on voyait un peu la ligne d'en dessous qui dépassait */
+    /* Mais tkt en théorie c'est good */
+
+    line-height: 20px;
+    max-height: 35px;
+}
